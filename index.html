@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sistema de Agendamento</title>
+</head>
+<body>
+    <h1>Bem-vindo ao Sistema de Agendamento</h1>
+    <p>Este é um sistema simples para agendar compromissos.</p>
+    <div class="login-container">
+        <h2>Login</h2>
+        <p>Entre na sua conta para continuar.</p>
+        <form action="/login" method="POST">
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" name="username" required placeholder="Digite seu usuário">
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required  placeholder="Digite sua senha">
+            <button type="submit" class="btn">Entrar</button>
+        </form>   
+    </div>
+    <script src="app.js"></script>
+    <noscript>Seu navegador não tem suporte à JavaScript</noscript>
+</body>
+</html>
