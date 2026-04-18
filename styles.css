@@ -9,11 +9,12 @@
 /* Corpo da página */
 body {
     height: 100vh;
-    background: linear-gradient(135deg, #4f46e5, #9333ea);
+    background: rgb(8, 121, 42);;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-top: 60px;
     color: #333;
 }
 
@@ -31,7 +32,7 @@ body > p {
 
 /* Container do login (o retângulo) */
 .login-container {
-    background: white;
+    background: rgb(207, 207, 207);
     padding: 30px;
     border-radius: 12px;
     width: 300px;
@@ -47,7 +48,7 @@ body > p {
 /* Texto dentro do card */
 .login-container p {
     margin-bottom: 20px;
-    color: #666;
+    color: #000000;
 }
 
 /* Labels */
@@ -68,12 +69,6 @@ input {
     transition: 0.2s;
 }
 
-/* Efeito ao clicar */
-input:focus {
-    border-color: #4f46e5;
-    box-shadow: 0 0 5px rgba(79, 70, 229, 0.5);
-}
-
 /* Botão */
 .btn {
     width: 100%;
@@ -81,7 +76,7 @@ input:focus {
     padding: 10px;
     border: none;
     border-radius: 8px;
-    background: #4f46e5;
+    background: #195521;
     color: white;
     font-size: 16px;
     cursor: pointer;
