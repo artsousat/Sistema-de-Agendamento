@@ -1,27 +1,31 @@
+#Importação da biblioteca Flask para criar o servidor web
 from flask import Flask, request, send_from_directory
-import os
 
+#Criação da váriavel flask
 app = Flask(__name__)
 
-# Servir arquivos estáticos como index.html e styles.css
+#Rota para o index.html
 @app.route('/')
 def index():
     return send_from_directory('.', 'index.html')
 
-@app.route('/<path:filename>')
+#Rota para os outros arquivos (CSS, JS.)
+@app.route('/<filename>')
 def static_files(filename):
     return send_from_directory('.', filename)
 
+#Rota para o /login
 @app.route('/login', methods=['POST'])
 def login():
-    username = request.form.get('username')
-    password = request.form.get('password')
+    nome = request.form.get('username')
+    senha = request.form.get('password')
 
-    # Verificação simples (substitua por banco de dados real)
-    if username == 'admin' and password == '1234':
-        return 'Login bem-sucedido! Bem-vindo, ' + username
+#Verificação se o nome e senha estão corretos
+    if nome == 'admin' and senha == 'admin':
+        return f'Bem-vindo, {nome}!'
     else:
-        return 'Usuário ou senha inválidos.'
+        return 'Usuário ou senha incorretos!'
 
+#Rodar o servidor
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(port=5500)
