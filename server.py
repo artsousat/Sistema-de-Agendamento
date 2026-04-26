@@ -22,9 +22,9 @@ def login():
 
 #Verificação se o nome e senha estão corretos
     if nome == 'admin' and senha == 'admin':
-        return f'Bem-vindo, {nome}!'
+        return send_from_directory('.', 'dashboard.html')
     else:
-        return 'Usuário ou senha incorretos!'
+        return send_from_directory('.', 'erro.html')
 
 #Rodar o servidor
 if __name__ == '__main__':

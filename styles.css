@@ -87,3 +87,25 @@ input {
 .btn:hover {
     background: #3730a3;
 }
+
+.erro-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column; 
+}
+
+.erro-btn {
+    width: 100%;
+    padding: 30px;
+    border-radius: 8px;
+    background: #195521;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: #333 solid 1px;
+    margin: 86px;
+}
+
